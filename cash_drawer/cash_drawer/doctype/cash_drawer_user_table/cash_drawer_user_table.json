@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-04 20:18:55.966851",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "user",
+  "type",
+  "action",
+  "column_break_5",
+  "closing_time",
+  "closing_time_croped"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nSales Drawer\nDelegate Drawer\nShipping Company Drawer",
+   "reqd": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Auto Closing",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "default": "00:00",
+   "fieldname": "closing_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Closing Time"
+  },
+  {
+   "fieldname": "closing_time_croped",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Closing Time Croped",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-10 21:10:08.666092",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Cash Drawer User Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

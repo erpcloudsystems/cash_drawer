@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "autoname": "field:user",
+ "creation": "2019-05-29 22:23:35.197384",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "user_name",
+  "date",
+  "column_break_2",
+  "balances_adjustment",
+  "delete_all_transactions",
+  "balance_section",
+  "balance_details",
+  "balance_adjustment_section",
+  "adjustments",
+  "drawer_closing_details_section",
+  "closing_transaction",
+  "balance_transfer_details_section",
+  "transfer_transaction"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance_section",
+   "fieldtype": "Section Break",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "balance_details",
+   "fieldtype": "Table",
+   "label": "Balance Details",
+   "options": "Drawer Balance Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "drawer_closing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Drawer Closing Details"
+  },
+  {
+   "fieldname": "closing_transaction",
+   "fieldtype": "Table",
+   "label": "Closing Transaction",
+   "options": "Closing Transactions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_transfer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Balance Transfer Details"
+  },
+  {
+   "fieldname": "transfer_transaction",
+   "fieldtype": "Table",
+   "label": "Transfer Transaction",
+   "options": "Transfer Transaction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balances_adjustment",
+   "fieldtype": "Button",
+   "label": "Balances Adjustment",
+   "options": "update_adjustment",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "delete_all_transactions",
+   "fieldtype": "Button",
+   "label": "Delete All Transactions",
+   "options": "delete_all_transactions",
+   "permlevel": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "balance_adjustment_section",
+   "fieldtype": "Section Break",
+   "label": "Balance Adjustment"
+  },
+  {
+   "fieldname": "adjustments",
+   "fieldtype": "Table",
+   "label": "Adjustments",
+   "options": "Cash Drawer Balance Adjustment",
+   "permlevel": 1
+  },
+  {
+   "fetch_from": "user.full_name",
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Name",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2022-01-05 22:13:05.447445",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Drawer Balance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Drawer User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Drawer Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cash Drawer Balance",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cash Drawer Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "user",
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "user",
+ "track_changes": 1
+}

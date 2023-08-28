@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2020-02-20 12:34:50.991173",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mode_of_payment",
+  "balance",
+  "name1"
+ ],
+ "fields": [
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mode Of Payment",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Name"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-29 22:38:56.683414",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "DBS",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

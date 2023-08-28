@@ -1,0 +1,222 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "SHP-DC.#",
+ "creation": "2020-02-17 18:23:37.625740",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shipping_company",
+  "user",
+  "dba",
+  "customise",
+  "from_date",
+  "to_date",
+  "get_data",
+  "auto_closed",
+  "column_break_4",
+  "direct_installment",
+  "online_payment",
+  "gift",
+  "cash_on_delivery",
+  "bank_instalment",
+  "section_break_9",
+  "transaction",
+  "section_break_8",
+  "balance_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Table",
+   "label": "Transaction",
+   "options": "Cash Drawer Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shipping Company Drawer",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "shipping_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shipping Company",
+   "options": "Shipping Company",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "cash_on_delivery",
+   "fieldtype": "Currency",
+   "label": "Cash",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_instalment",
+   "fieldtype": "Currency",
+   "label": "Bank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dba",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "DB"
+  },
+  {
+   "fieldname": "balance_details",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Balance Details",
+   "options": "DBS"
+  },
+  {
+   "depends_on": "eval:doc.customise",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "depends_on": "eval:doc.customise",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "customise",
+   "fieldtype": "Check",
+   "label": "Customised Search"
+  },
+  {
+   "default": "0",
+   "fieldname": "direct_installment",
+   "fieldtype": "Currency",
+   "label": "Direct Installment",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "online_payment",
+   "fieldtype": "Currency",
+   "label": "Online Payment",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "gift",
+   "fieldtype": "Currency",
+   "label": "Gift",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "shipping_company.user",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "default": "No",
+   "fieldname": "auto_closed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Auto Closed",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-07 23:03:25.102412",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Shipping Company Drawer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Drawer Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cash Drawer Delivery User",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cash Drawer Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

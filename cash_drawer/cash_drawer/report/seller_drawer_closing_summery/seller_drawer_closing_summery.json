@@ -1,0 +1,35 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2020-02-28 07:54:01.099855",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-01-05 22:17:02.328995",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Seller Drawer Closing Summery",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Sales Drawer",
+ "report_name": "Seller Drawer Closing Summery",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Drawer Manager"
+  },
+  {
+   "role": "Cash Drawer Sales User"
+  },
+  {
+   "role": "Cash Drawer Manager"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "creation": "2019-05-30 21:54:08.334821",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mode_of_payment",
+  "balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mode Of Payment",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Balance",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-29 22:36:40.059445",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Drawer Balance Summary",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "DEL-DC.#",
+ "creation": "2020-02-17 18:22:19.454077",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "delegate",
+  "user",
+  "dba",
+  "customise",
+  "from_date",
+  "to_date",
+  "get_data",
+  "auto_closed",
+  "column_break_4",
+  "cash_on_delivery",
+  "bank_instalment",
+  "section_break_9",
+  "transaction",
+  "section_break_8",
+  "balance_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Table",
+   "label": "Transaction",
+   "options": "Cash Drawer Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delegate Drawer",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "delegate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Delegate",
+   "options": "Delegate",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "cash_on_delivery",
+   "fieldtype": "Currency",
+   "label": "Cash",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_instalment",
+   "fieldtype": "Currency",
+   "label": "Bank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "balance_details",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Balance Details",
+   "options": "DBS"
+  },
+  {
+   "fieldname": "dba",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "DB"
+  },
+  {
+   "depends_on": "eval:doc.customise",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "depends_on": "eval:doc.customise",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "customise",
+   "fieldtype": "Check",
+   "label": "Customised Search"
+  },
+  {
+   "fetch_from": "delegate.user",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "No",
+   "fieldname": "auto_closed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Auto Closed",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-07 23:02:43.245847",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Delegate Drawer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Drawer Manager",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cash Drawer Delivery User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Cash Drawer Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

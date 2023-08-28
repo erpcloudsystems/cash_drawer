@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "creation": "2019-05-31 16:23:00.904158",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "created_date",
+  "recipient",
+  "transaction_no",
+  "submitted_by",
+  "amount",
+  "mode_of_payment",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "created_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Created Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recipient"
+  },
+  {
+   "fieldname": "transaction_no",
+   "fieldtype": "Link",
+   "label": "Transaction No",
+   "options": "Drawer Transfer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Submitted By"
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mode Of Payment"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nConfirmed"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-12-29 22:39:13.346872",
+ "modified_by": "Administrator",
+ "module": "Cash Drawer",
+ "name": "Transfer Transaction",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}
